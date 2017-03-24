@@ -1,0 +1,14 @@
+{
+    "name": "m.dykhalkin/goodboo",
+    "type": "project",
+    "require": {
+        "silex/silex": "2.0",
+        "twig/twig": "^1.33"
+    },
+    "authors": [
+        {
+            "name": "m.dykhalkin",
+            "email": "m.dykhalkin@tinkoff.ru"
+        }
+    ]
+}
