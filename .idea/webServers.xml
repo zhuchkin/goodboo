@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="77124a65-f74d-4099-8b6a-6aa88b2b2c7e" name="goodboo" url="http://31.31.196.138">
+        <fileTransfer host="31.31.196.138" port="21" password="df93dff5dfdedf93dffddfcbdfcddfc8" username="u0346940">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
