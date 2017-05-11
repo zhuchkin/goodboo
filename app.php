@@ -43,12 +43,12 @@ $app->post('/application', function(Request $request) {
 
 $app->post('/telegram/message', function(Request $request) {
 
-/*	$application  = array($request->getMethod());
+	$application  = array('ok');
 
 	$filename = __DIR__.'\mss.csv';
 	$file = fopen($filename, 'a');
 	fputcsv($file, $application, ';');
-	fclose($file);*/
+	fclose($file);
 
 	return new Response(200);
 
