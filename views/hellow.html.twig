@@ -722,7 +722,7 @@
             $email = $form.find("input[id='email']").val(),
             $message = $form.find("textarea[id='message']").val();
 
-        $.post('/application', {name: $name, email: $email, message: $message});
+        $.post('./app.php/application', {name: $name, email: $email, message: $message});
 
     });
 </script>
