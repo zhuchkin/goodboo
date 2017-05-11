@@ -50,6 +50,8 @@ $app->post('/telegram/message', function(Request $request) {
 	fputcsv($file, $application, ';');
 	fclose($file);
 
+	return Response::HTTP_CREATED;
+
 });
 
 $app->run();
