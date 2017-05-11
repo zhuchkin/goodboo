@@ -21,17 +21,24 @@ $app->register(new TwigServiceProvider(), array(
 
 $app['debug'] = true;
 
-/*$app->post('/application', function(Request $request) {
-    $name = $request->get('name');
-    $file = fopen('mss.txt', 'w');
-    file_put_contents($file, $name);
-    fclose($file);
-    return Response::HTTP_OK;
-});*/
-
 $app->get('/', function() use ($app) {
     return $app['twig']->render('hellow.html.twig', array(
     ));
+});
+
+$app->post('/application', function(Request $request) {
+
+	$application  = array(
+		$request->get('name'),
+		$request->get('email'),
+		$request->get('message')
+	);
+
+	$filename = __DIR__.'\mss.csv';
+	$file = fopen($filename, 'a');
+	fputcsv($file, $application, ';');
+	fclose($file);
+	return new Response(json_encode($application));
 });
 
 $app->run();
