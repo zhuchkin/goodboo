@@ -43,14 +43,14 @@ $app->post('/application', function(Request $request) {
 
 $app->post('/telegram/message', function(Request $request) {
 
-	$application  = array($request->getMethod());
+/*	$application  = array($request->getMethod());
 
 	$filename = __DIR__.'\mss.csv';
 	$file = fopen($filename, 'a');
 	fputcsv($file, $application, ';');
-	fclose($file);
+	fclose($file);*/
 
-	return new Response(json_encode('ok'), 200);
+	return new Response(200);
 
 });
 
