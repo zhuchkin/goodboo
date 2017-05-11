@@ -34,7 +34,7 @@ $app->post('/application', function(Request $request) {
 		$request->get('message')
 	);
 
-	$filename = __DIR__.'\mss.csv';
+	$filename = __DIR__.'/mss.csv';
 	$file = fopen($filename, 'a');
 	fputcsv($file, $application, ';');
 	fclose($file);
@@ -43,9 +43,9 @@ $app->post('/application', function(Request $request) {
 
 $app->post('/telegram/message', function(Request $request) {
 
-	$application  = array('ok');
+	$application  = array($request->getContent());
 
-	$filename = __DIR__.'\mss.csv';
+	$filename = __DIR__.'/mss.csv';
 	$file = fopen($filename, 'a');
 	fputcsv($file, $application, ';');
 	fclose($file);
