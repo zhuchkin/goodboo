@@ -43,7 +43,7 @@ $app->post('/application', function(Request $request) {
 
 $app->post('/telegram/message', function(Request $request) {
 
-	$application  = $request->getMethod();
+	$application  = array($request->getMethod());
 
 	$filename = __DIR__.'\mss.csv';
 	$file = fopen($filename, 'a');
